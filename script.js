@@ -64,8 +64,8 @@
 const bmiCalc = (event) => {
   event.preventDefault();
 
-  let weight = Number(document.getElementById("weight").value);
-  let height = Number(document.getElementById("height").value);
+  let weight = Number(document.querySelector("#weight").value);
+  let height = Number(document.querySelector("#height").value);
   let bmiResult = document.querySelector(".bmi-result");
 
   if (!weight || !height) {
