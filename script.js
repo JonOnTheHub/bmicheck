@@ -69,7 +69,7 @@ const bmiCalc = (event) => {
   let bmiResult = document.querySelector(".bmi-result");
 
   if (!weight || !height) {
-    alert("enter valid numbers. are you scared to check?");
+    bmiResult.textContent = `enter valid numbers. are you scared to check?`;
     return;
   }
 
@@ -82,38 +82,37 @@ const bmiCalc = (event) => {
   switch (true) {
     case bmi < 18.5:
       situation = "underweight. eat real food.";
-      stateClass = "underweight"
+      stateClass = "underweight";
       break;
 
     case bmi >= 18.5 && bmi < 25:
       situation = "a healthy weight. body tea.";
-      stateClass = "healthy"
+      stateClass = "healthy";
       break;
 
     case bmi >= 25 && bmi < 30:
       situation = "overweight. salads, now.";
-      stateClass = "overweight"
+      stateClass = "overweight";
       break;
 
     case bmi >= 30 && bmi < 35:
       situation = "obese (Class I). eat less, walk more.";
-      stateClass = "obese"
+      stateClass = "obese";
       break;
 
     case bmi >= 35 && bmi < 40:
       situation = "obese (Class II). eat nothing, walk more.";
-      stateClass = "obese-v2"
+      stateClass = "obese-v2";
       break;
 
     default:
       situation =
         "severely obese (Class III). how did you even get to this point?.";
-      stateClass = "obese-v3"
-
+      stateClass = "obese-v3";
   }
 
   bmiResult.textContent = `your BMI is ${bmi.toFixed(1)}. you are ${situation}`;
-  bmiResult.classList.add(stateClass)
+  bmiResult.classList.add(stateClass);
 };
 
 document.querySelector(".bmi-form").addEventListener("submit", bmiCalc);
