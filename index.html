@@ -2,15 +2,36 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BMI Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <h1>BMI Calculator</h1>
-    <h2>Determine your body mass index with your height and weight</h2>
+    <main class="app">
+        <h1>BMI Calculator</h1>
+        <p class="desc">
+            Determine your body mass index using your height and weight
+        </p>
+
+        <form class="bmi-form">
+            <div class="field">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" step="any" placeholder="e.g. 70" />
+            </div>
+
+            <div class="field">
+                <label for="height">Height (m)</label>
+                <input type="number" id="height" step="any" placeholder="e.g. 1.75" />
+            </div>
+
+            <button type="submit" id="submitbtn">Calculate BMI</button>
+        </form>
+        <div id="bmi-result" class="bmi-result"></div>
+    </main>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>
