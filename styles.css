@@ -1,3 +1,8 @@
+:root {
+  --accent: #3b82f6; /* soft blue */
+  --dark: #111827;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +25,7 @@ body {
   width: 100%;
   max-width: 400px;
   border-radius: 16px;
-  box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* headings */
@@ -65,8 +70,7 @@ input {
 }
 
 input:focus {
-  outline: none;
-  border-color: dodgerblue;
+  outline: 2px solid var(--accent);
   box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.15);
 }
 
@@ -74,9 +78,9 @@ input:focus {
 button {
   margin-top: 8px;
   padding: 8px;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 8px;
-  background: dodgerblue;
+  background-color: var(--dark);
   color: #fff;
   font-size: 1rem;
   font-weight: 500;
@@ -87,7 +91,9 @@ button {
 }
 
 button:hover {
-  background: #1c7ed6;
+  background-color: #fff;
+  color: var(--dark);
+  border: 1px solid var(--dark);
 }
 
 button:active {
